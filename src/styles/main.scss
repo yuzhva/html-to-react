@@ -1,1 +1,15 @@
-// TODO add some styles
+@import './fonts/basier-circle';
+
+@import 'components/components.scss';
+
+html,
+body {
+  font-size: 16px;
+  font-family: $font--basier-circle;
+}
+
+h1,
+p,
+span {
+  margin: 0;
+}

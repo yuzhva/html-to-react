@@ -1,0 +1,48 @@
+// Colors
+$white: #ffffff;
+$white-80: #ffffff80;
+$black: #000000;
+$black-17: #00000017;
+$black-33: #00000033;
+$gray-light: #fcfafb;
+$gray-dark: #7b797b;
+$orange-light: #f3eeef;
+$green: #6ed69a;
+
+// Fonts
+$font-config: (
+  size: (
+    sm: (
+      font-size: 0.75em,
+      letter-spacing: -0.18px,
+      line-height: 1.5em,
+    ),
+    md: (
+      font-size: 1em,
+      letter-spacing: -0.24px,
+      line-height: 1.4em,
+    ),
+    lg: (
+      font-size: 1.25em,
+      letter-spacing: -0.3px,
+      line-height: 1.3em,
+    ),
+    larger: (
+      font-size: 1.438em,
+      letter-spacing: -0.34px,
+      line-height: 1.2em,
+    ),
+  ),
+);
+
+// Spacings
+$spacing-sizes: (
+  5: 0.25em,
+  20: 1.25em,
+  35: 2.188em,
+);
+
+// Modal
+$modalPadding: 2.5em;
+$formElementsPadding: 17px;
+$modalMediaMax: 1024px;

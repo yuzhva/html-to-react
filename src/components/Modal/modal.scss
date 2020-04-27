@@ -1,0 +1,85 @@
+@import '~react-ui-elements/src/styles/mixins';
+
+@import '~styles/variables';
+
+$btnCloseSize: 33px;
+
+// The root style that should not be changed
+.ms-modal {
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  &__overlay {
+    background-color: $white-80;
+  }
+
+  &__dialog {
+    margin: auto; // required to center the modal
+  }
+
+  // animation
+  &--opened {
+    opacity: 1;
+    top: 0;
+  }
+
+  &--closed {
+    opacity: 0;
+    top: 75%;
+  }
+
+  &--opened,
+  &--closed {
+    transition: opacity 0.5s, top 0.5s;
+  }
+}
+
+// Theme and other UI styles
+.ms-modal {
+  &--theme {
+    &-minimal {
+      background-color: $white;
+      box-shadow: 0 0 0.625em $black-33;
+      border-radius: 0.625em;
+
+      padding: $modalPadding;
+
+      position: relative;
+
+      // remove style at mobile phones
+      @media only screen and (max-width: $modalMediaMax) {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__close {
+    // style
+    background: $gray-light;
+    border: none;
+    border-radius: 50%;
+    color: $gray-dark;
+    cursor: pointer;
+
+    // position
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    // size
+    font-size: map-deep-get($font-config, size, lg, 'font-size');
+    line-height: 0;
+    height: $btnCloseSize;
+    width: $btnCloseSize;
+
+    &:hover {
+      border: 0.063em solid lighten($gray-dark, 20);
+    }
+  }
+}

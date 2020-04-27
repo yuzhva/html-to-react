@@ -1,0 +1,79 @@
+@import '~react-ui-elements/src/styles/utilities/spacing';
+@import '~react-ui-elements/src/hocs/Typography/builder';
+@import '~react-ui-elements/src/styles/mixins';
+
+@import '~styles/variables';
+
+// Button
+.ms-btn {
+  background-color: $green;
+  box-shadow: 0 0 0.625em $black-17;
+  border-radius: 0.313em;
+  color: $white;
+  cursor: pointer;
+  font-size: map-deep-get($font-config, size, lg, 'font-size');
+  font-weight: 500;
+
+  padding: $formElementsPadding;
+
+  &:hover {
+    background-color: darken($green, 10);
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}
+
+// Input
+.ms-input {
+  border: 2px solid $orange-light;
+  border-radius: 7px;
+  padding: $formElementsPadding;
+  font-size: map-deep-get($font-config, size, md, 'font-size');
+  font-weight: normal;
+
+  &:hover {
+    border-color: darken($orange-light, 3);
+  }
+
+  &--full-width {
+    width: calc(100% - #{$formElementsPadding * 2});
+  }
+}
+
+// Spacing
+.ms-sp {
+  display: block;
+
+  @include build-spacing-utilities($spacing-sizes);
+}
+
+// Text
+.ms-text {
+  &--align {
+    @each $value in (center, right) {
+      &-#{$value} {
+        text-align: $value;
+      }
+    }
+  }
+
+  &--color {
+    @each $modifier, $color in (black: $black, 'gray-dark': $gray-dark) {
+      &-#{$modifier} {
+        color: $color;
+      }
+    }
+  }
+
+  &--weight {
+    @each $modifier, $weight in (regular: normal, medium: 500) {
+      &-#{$modifier} {
+        font-weight: $weight;
+      }
+    }
+  }
+}
+
+@include build-typography($font-config, '.ms-text');

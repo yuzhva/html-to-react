@@ -1,0 +1,53 @@
+$font--basier-circle: 'BasierCircle';
+
+@font-face {
+  font-family: $font--basier-circle;
+  src: url('./BasierCircle-Bold.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: $font--basier-circle;
+  src: url('./BasierCircle-BoldItalic.otf') format('opentype');
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: $font--basier-circle;
+  src: url('./BasierCircle-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $font--basier-circle;
+  src: url('./BasierCircle-MediumItalic.otf') format('opentype');
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $font--basier-circle;
+  src: url('./BasierCircle-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: $font--basier-circle;
+  src: url('./BasierCircle-RegularItalic.otf') format('opentype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: $font--basier-circle;
+  src: url('./BasierCircle-SemiBold.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: $font--basier-circle;
+  src: url('./BasierCircle-SemiBoldItalic.otf') format('opentype');
+  font-style: italic;
+  font-weight: 600;
+}

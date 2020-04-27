@@ -1,0 +1,31 @@
+@import '~styles/variables';
+
+@import './components/components.scss';
+
+$maxWidth: 25.813em;
+
+.modal__sign-up {
+  max-width: calc(#{$maxWidth} - #{$modalPadding * 2});
+
+  a {
+    text-decoration: none;
+    color: $black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .modal__sub-title {
+    margin: 0 auto;
+    max-width: 19em;
+  }
+}
+
+// Responsiveness
+@media only screen and (max-width: $modalMediaMax) {
+  .modal__sign-up {
+    height: 100%;
+    width: 100%;
+  }
+}
