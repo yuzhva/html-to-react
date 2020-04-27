@@ -24,7 +24,8 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[hash].[ext]',
-              outputPath: 'dist/assets/images/',
+              outputPath: 'dist/assets/images',
+              publicPath: './assets/images',
             },
           },
         ],
@@ -37,6 +38,7 @@ module.exports = {
             options: {
               name: '[name].[hash].[ext]',
               outputPath: 'dist/assets/fonts',
+              publicPath: './assets/fonts',
             },
           },
         ],
@@ -47,10 +49,11 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../',
+              publicPath: './',
             },
           },
           'css-loader',
+          'resolve-url-loader',
           'sass-loader',
         ],
       },
